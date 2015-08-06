@@ -19,7 +19,7 @@ app.on('ready', function() {
 function openWindow(baseDir){
   var win = new BrowserWindow({width: 800, height: 600});
   win.loadUrl('file://' + __dirname + '/index.html?baseDir=' + encodeURIComponent(baseDir));
-  winw.on('closed', function() {
+  win.on('closed', function() {
     win = null;
   });
 }
@@ -44,7 +44,7 @@ var template = [
   }, {
     label: 'View',
     submenu: [
-      {label: 'Reload', accelerator: 'Comman+R', click: function(){ BrowserWindow.getFocusedWindow().reloadIgnoringCache();}},
+      {label: 'Reload', accelerator: 'Command+R', click: function(){ BrowserWindow.getFocusedWindow().reloadIgnoringCache();}},
       {label: 'Toggle DevTools', accelerator: 'Alt+Command+I', click: function(){BrowserWindow.getFocusedWindow().toggleDevTools();}}
     ]
   }
